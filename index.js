@@ -8,9 +8,21 @@ app.get('/', (req, res) => {
 });
 
 app.get('/check', (req, res) => {
-  var id = req.query.id
-  res.send('Hello Express app!' + id)
+  const storage = new Storage({
+    email: 'developeracc2004@gmail.com',
+    password: 'petty2301',
+    userAgent: 'ExampleClient/1.0'
+  })
 
+  storage.once('ready', () => {
+    // User is now logged in
+    console.log("valid")
+  })
+  
+  storage.once('error', error => {
+    // Some error happened
+    console.log("invalid")
+  })
 });
 
 app.listen(5050, () => {
