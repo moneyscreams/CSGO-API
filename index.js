@@ -16,12 +16,12 @@ app.get('/check', (req, res) => {
 
   storage.once('ready', () => {
     // User is now logged in
-    console.log("valid")
+    res.send("valid")
   })
   
   storage.once('error', error => {
     // Some error happened
-    console.log("invalid")
+    res.send("invalid")
   })
 });
 
