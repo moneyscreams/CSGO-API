@@ -22,6 +22,7 @@
     "install": "^0.13.0",
     "steam": "^1.4.1",
     "steamid": "^2.0.0",
-    "megajs": "^1.1.1"
+    "megajs": "^1.1.1",
+    "body-parser": "^1.20.2"
   }
 }
