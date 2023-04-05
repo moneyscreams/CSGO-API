@@ -1,5 +1,6 @@
 const express = require('express');
-const { Storage } = require('megajs')
+const { Storage } = require('megajs');
+const bodyParser = require('body-parser');
 
 const app = express();
 
